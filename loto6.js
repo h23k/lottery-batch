@@ -18,13 +18,13 @@ const wtos = require('./warekitoseireki.js')
 const urlBacknumber = 'https://www.mizuhobank.co.jp/retail/takarakuji/loto/backnumber'
 const urlLotteryCsv = 'https://www.mizuhobank.co.jp/retail/takarakuji/loto/loto6/csv'
 const maxBacknumber = 460
-const maxLottery = 1521
+const maxLottery = 1522
 
 const getLotteryBacknumber = (n) => {
   const times = n || 1
 
   if (times > maxBacknumber) {
-    setTimeout(getLotteryCsv, 500)
+    setTimeout(getLotteryCsv, 500, n)
     return
   }
 
@@ -65,7 +65,6 @@ const getLotteryBacknumber = (n) => {
 
   setTimeout(getLotteryBacknumber, 500, times + 20)
 }
-getLotteryBacknumber()
 
 const getLotteryCsv = (n) => {
   const start = n || maxBacknumber + 1
@@ -122,3 +121,5 @@ const getLotteryCsv = (n) => {
 
   setTimeout(getLotteryCsv, 500, end)
 }
+
+getLotteryBacknumber(1522)
