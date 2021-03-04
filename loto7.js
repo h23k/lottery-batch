@@ -15,7 +15,7 @@ const csv = require('csv')
 const wtos = require('./warekitoseireki.js')
 
 const urlLotteryCsv = 'https://www.mizuhobank.co.jp/retail/takarakuji/loto/loto7/csv'
-const maxLottery = 388
+const maxLottery = 409
 
 const getLotteryCsv = (n) => {
   const start = n || 1
@@ -72,4 +72,4 @@ const getLotteryCsv = (n) => {
   setTimeout(getLotteryCsv, 500, end)
 }
 
-getLotteryCsv(388)
+getLotteryCsv(maxLottery)
