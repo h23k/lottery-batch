@@ -1,5 +1,5 @@
 const fs = require('fs')
-const filename = 'lottery6.csv'
+const filename = 'loto6.csv'
 fs.createWriteStream(filename).close()
 const outfile = fs.createWriteStream(
   filename,
@@ -18,7 +18,8 @@ const wtos = require('./warekitoseireki.js')
 const urlBacknumber = 'https://www.mizuhobank.co.jp/retail/takarakuji/loto/backnumber'
 const urlLotteryCsv = 'https://www.mizuhobank.co.jp/retail/takarakuji/loto/loto6/csv'
 const maxBacknumber = 460
-const maxLottery = 1565
+const maxLottery = 1894
+
 
 const getLotteryBacknumber = (n) => {
   const times = n || 1
